@@ -7,10 +7,10 @@ export const install = (app: App): void => {
 };
 
 // Vue plugin
-const VueTooltipPlugin: Plugin = { install };
+const VuComponentsPlugin: Plugin = { install };
 
 // Default export (for use with app.use())
-export default VueTooltipPlugin;
+export default VuComponentsPlugin;
 
 // Named exports (for direct import)
 export { UiFlex };

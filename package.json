@@ -1,6 +1,6 @@
 {
     "name": "turmag-vue-components",
-    "description": "Module for convenient work with tooltips in Vue3 (using a directive and a component)",
+    "description": "The library of the components",
     "type": "module",
     "version": "0.0.1",
     "private": false,
@@ -35,7 +35,6 @@
         "url": "https://github.com/Turmag/turmag-vue-components.git"
     },
     "bugs": { "url": "https://github.com/Turmag/turmag-vue-components/issues" },
-    "homepage": "https://goo.su/YfII",
     "scripts": { "build": "vite build" },
     "devDependencies": {
         "@types/node": "^24.3.1",
