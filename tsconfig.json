@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "baseUrl": ".",
+        "lib": ["esnext", "dom"],
+        "module": "esnext",
+        "moduleResolution": "node",
+        "paths": { "@/*": ["src/*"] },
+        "strict": true,
+        "target": "esnext",
+        "types": ["node", "vite/client"]
+    },
+    "include": [
+        "./**/*",
+        "**/*/*.json",
+        "package.json"
+    ]
+}

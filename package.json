@@ -1,0 +1,56 @@
+{
+    "name": "turmag-vue-components",
+    "description": "Module for convenient work with tooltips in Vue3 (using a directive and a component)",
+    "type": "module",
+    "version": "0.0.1",
+    "private": false,
+    "author": {
+        "name": "Pavel Vinogradov",
+        "nickname": "turmag",
+        "email": "turmagger@gmail.com",
+        "github": "https://github.com/Turmag"
+    },
+    "main": "./dist/turmag-vue-components.umd.js",
+    "module": "./dist/turmag-vue-components.es.js",
+    "typings": "./dist/index.d.ts",
+    "styles": "./dist/style.css",
+    "files": [
+        "dist"
+    ],
+    "exports": {
+        ".": {
+            "import": "./dist/turmag-vue-components.es.js",
+            "require": "./dist/turmag-vue-components.umd.js",
+            "types": "./dist/index.d.ts"
+        }
+    },
+    "peerDependencies": { "vue": "^3.5.1" },
+    "keywords": [
+        "turmag-vue-components",
+        "vue3"
+    ],
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Turmag/turmag-vue-components.git"
+    },
+    "bugs": { "url": "https://github.com/Turmag/turmag-vue-components/issues" },
+    "homepage": "https://goo.su/YfII",
+    "scripts": { "build": "vite build" },
+    "devDependencies": {
+        "@types/node": "^24.3.1",
+        "@vitejs/plugin-vue": "^5.1.4",
+        "eslint": "^9.38.0",
+        "oxlint": "^1.39.0",
+        "sass-embedded": "^1.97.3",
+        "stylelint": "^16.11.0",
+        "turmag-eslint-config": "^2.0.71",
+        "turmag-stylelint-config": "^0.0.11",
+        "typescript": "5.8.3",
+        "vite": "^7.3.1",
+        "vite-plugin-css-injected-by-js": "^3.1.1",
+        "vite-plugin-dts": "^3.6.4",
+        "vue": "^3.5.27",
+        "vue-tsc": "^1.8.27"
+    }
+}
