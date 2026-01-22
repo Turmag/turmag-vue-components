@@ -2,7 +2,7 @@
     "name": "turmag-vue-components",
     "description": "The library of the components",
     "type": "module",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "private": false,
     "author": {
         "name": "Pavel Vinogradov",
