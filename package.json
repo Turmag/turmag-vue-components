@@ -35,7 +35,10 @@
         "url": "https://github.com/Turmag/turmag-vue-components.git"
     },
     "bugs": { "url": "https://github.com/Turmag/turmag-vue-components/issues" },
-    "scripts": { "build": "vite build" },
+    "scripts": {
+        "build": "vite build",
+        "generate-components-idx": "node .\\/node-files\\/generateComponentsIndex.js"
+    },
     "devDependencies": {
         "@types/node": "^24.3.1",
         "@vitejs/plugin-vue": "^5.1.4",
@@ -51,5 +54,6 @@
         "vite-plugin-dts": "^3.6.4",
         "vue": "^3.5.27",
         "vue-tsc": "^1.8.27"
-    }
+    },
+    "dependencies": { "vue-tippy": "^6.7.1" }
 }
