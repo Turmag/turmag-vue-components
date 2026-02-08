@@ -27,7 +27,6 @@ withDefaults(defineProps<{
     wrap?: 'nowrap' | 'balance' | '';
 }>(), {
     color: 'default',
-    cursor: '',
     display: '',
     line: 'lh100',
     size: 'fs16',
