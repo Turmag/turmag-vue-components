@@ -1,0 +1,12 @@
+:root {
+    --background-color-default: #fff;
+    --background-color-secondary: #dcdcdc;
+    --background-color-accent: #335fd9;
+    --background-color-surface: #909090;
+    --background-color-muted: #c0bebe;
+    --background-color-quiet: #ebd997;
+    --color-border-default: #232323;
+    --color-border-secondary: #f38d56;
+    --color-border-accent: #455ed8;
+    --color-border-muted: #a1a4b7;
+}
