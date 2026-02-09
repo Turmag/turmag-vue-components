@@ -58,7 +58,6 @@ interface IProps {
     maxWidth?: number;
     offset?: number[];
     placement?: TTooltipPosition;
-    theme?: 'light' | 'dark';
     zIndex?: number;
 }
 
@@ -78,7 +77,6 @@ const props = withDefaults(defineProps<IProps>(), {
     // INFO: смещение стрелки от центра тултипа, расстояние от триггера
     offset: () => [0, 10],
     placement: 'top',
-    theme: 'light',
     zIndex: 9999,
 });
 
@@ -129,7 +127,6 @@ const initTippy = () => {
                 },
             ],
         },
-        theme: props.theme,
         trigger: props.action,
         zIndex: props.zIndex,
     });

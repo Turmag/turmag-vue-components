@@ -1,0 +1,9 @@
+:root {
+    --background-color-default: #fff;
+    --background-color-secondary: #dcdcdc;
+    --color-text-default: #213547;
+
+    /* Тени */
+    --shadow-s: 0 1px 2px 0 rgb(0 0 0 / 15%);
+    --shadow-m: 0 4px 40px 0 rgb(0 0 0 / 35%);
+}
