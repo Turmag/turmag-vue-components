@@ -6,10 +6,11 @@ import type { Meta, StoryFn } from '@storybook/vue3-vite';
 export default {
     args: {
         color: 'default',
+        default: 'Текст!',
         display: '',
         line: 'lh100',
         size: 'fs16',
-        text: 'Обычный текст',
+        text: 'Много разного текста, чтоб было понятно, что меняется, когда мы ставим тот или иной параметр. И хорошо, если этот текст поместится здесь таким образом, чтоб занимать пространство в 2, а то и в 3 строки. Потому что тогда лучше видно, как влияют параметры текста на сам текст.',
         weight: 'fw400',
         wrap: '',
     },
@@ -45,7 +46,7 @@ export default {
     title: 'UiText',
 } as Meta<typeof UiText>;
 
-export const DefaultUiText: StoryFn<typeof UiText> = (args: InstanceType<typeof UiText>['$props']) => ({
+export const Default: StoryFn<typeof UiText> = (args: InstanceType<typeof UiText>['$props']) => ({
     components: { UiText },
     setup() {
         // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
@@ -61,26 +62,66 @@ const Template: StoryFn<typeof UiText> = (args: InstanceType<typeof UiText>['$pr
         return { args };
     },
     template: `
-        <div style="display: flex; flex-direction: row; gap: 12px;">
         <UiText v-bind="args" />
-        </div>
+    `,
+});
+
+const TemplateTwoTexts: StoryFn<typeof UiText> = (args: InstanceType<typeof UiText>['$props']) => ({
+    components: { UiText },
+    setup() {
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+        return { args };
+    },
+    template: `
+        <UiText v-bind="args" />
+        <UiText v-bind="args" />
     `,
 });
 
 // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
-export const HoverUiText = Template.bind({}) as {
+export const ColorHover = Template.bind({}) as {
     args: InstanceType<typeof UiText>['$props'];
 };
-HoverUiText.args = {
+ColorHover.args = {
     color: 'hover',
-    text: 'Текст с наведением',
+    text: 'Текст с цветом наведения',
 };
 
 // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
-export const BoldUiText = Template.bind({}) as {
+export const WeightBold = Template.bind({}) as {
     args: InstanceType<typeof UiText>['$props'];
 };
-BoldUiText.args = {
+WeightBold.args = {
     text: 'Жирный текст',
     weight: 'fw700',
 };
+
+// eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
+export const LineHeightLarge = Template.bind({}) as {
+    args: InstanceType<typeof UiText>['$props'];
+};
+LineHeightLarge.args = { line: 'lh150' };
+
+// eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
+export const DisplayBlock = TemplateTwoTexts.bind({}) as {
+    args: InstanceType<typeof UiText>['$props'];
+};
+DisplayBlock.args = {
+    display: 'block',
+    text: 'Просто что-то тут написали',
+};
+
+// eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
+export const SizeBig = Template.bind({}) as {
+    args: InstanceType<typeof UiText>['$props'];
+};
+SizeBig.args = {
+    size: 'fs36',
+    text: 'Крупный текст',
+};
+
+// eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
+export const WrapNoWrap = Template.bind({}) as {
+    args: InstanceType<typeof UiText>['$props'];
+};
+WrapNoWrap.args = { wrap: 'nowrap' };
