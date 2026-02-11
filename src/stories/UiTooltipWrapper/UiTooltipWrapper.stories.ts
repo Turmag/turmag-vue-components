@@ -53,29 +53,6 @@ export default {
     title: 'UiTooltipWrapper',
 } as Meta<typeof UiTooltipWrapper>;
 
-export const Default: StoryFn<typeof UiTooltipWrapper> = (args: InstanceType<typeof UiTooltipWrapper>['$props']) => ({
-    components: {
-        UiFlex,
-        UiTooltipContent,
-        UiTooltipWrapper,
-    },
-    setup() {
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-        return { args };
-    },
-    template: `
-        <UiFlex justify-content="center">
-            <UiTooltipWrapper v-model="args.modelValue" v-bind="args">
-                <template #trigger>
-                    <button>Кнопка-триггер</button>
-                </template>
-                <UiTooltipContent>
-                    Информация об этой кнопке
-                </UiTooltipContent>
-            </UiTooltipWrapper>
-        </UiFlex>`,
-});
-
 const Template: StoryFn<typeof UiTooltipWrapper> = (args: InstanceType<typeof UiTooltipWrapper>['$props']) => ({
     components: {
         UiFlex,
@@ -98,6 +75,11 @@ const Template: StoryFn<typeof UiTooltipWrapper> = (args: InstanceType<typeof Ui
             </UiTooltipWrapper>
         </UiFlex>`,
 });
+
+// eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
+export const Default = Template.bind({}) as {
+    args: InstanceType<typeof UiTooltipWrapper>['$props'];
+};
 
 // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
 export const WithoutArrow = Template.bind({}) as {

@@ -1,6 +1,9 @@
 :root {
+    /* Фоны */
     --background-color-default: #fff;
     --background-color-secondary: #dcdcdc;
+
+    /* Цвета для текста */
     --color-text-default: #213547;
 
     /* Тени */

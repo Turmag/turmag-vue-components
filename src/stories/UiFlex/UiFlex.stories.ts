@@ -117,7 +117,7 @@ export default {
     title: 'UiFlex',
 } as Meta<typeof UiFlex>;
 
-export const Default: StoryFn<typeof UiFlex> = (args: InstanceType<typeof UiFlex>['$props']) => ({
+export const Template: StoryFn<typeof UiFlex> = (args: InstanceType<typeof UiFlex>['$props']) => ({
     components: { UiFlex },
     setup() {
         // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
@@ -126,16 +126,10 @@ export const Default: StoryFn<typeof UiFlex> = (args: InstanceType<typeof UiFlex
     template: '<UiFlex v-bind="args" style="height: 100px;"><UiFlex>Блок 1</UiFlex><UiFlex>Блок 2</UiFlex></UiFlex>',
 });
 
-const Template: StoryFn<typeof UiFlex> = (args: InstanceType<typeof UiFlex>['$props']) => ({
-    components: { UiFlex },
-    setup() {
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-        return { args };
-    },
-    template: `
-        <UiFlex v-bind="args" style="height: 100px;" />
-    `,
-});
+// eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
+export const Default = Template.bind({}) as {
+    args: InstanceType<typeof UiFlex>['$props'];
+};
 
 // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
 export const BgSecondary = Template.bind({}) as {

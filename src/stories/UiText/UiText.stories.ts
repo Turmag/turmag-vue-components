@@ -46,15 +46,6 @@ export default {
     title: 'UiText',
 } as Meta<typeof UiText>;
 
-export const Default: StoryFn<typeof UiText> = (args: InstanceType<typeof UiText>['$props']) => ({
-    components: { UiText },
-    setup() {
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-        return { args };
-    },
-    template: '<UiText v-bind="args" />',
-});
-
 const Template: StoryFn<typeof UiText> = (args: InstanceType<typeof UiText>['$props']) => ({
     components: { UiText },
     setup() {
@@ -77,6 +68,11 @@ const TemplateTwoTexts: StoryFn<typeof UiText> = (args: InstanceType<typeof UiTe
         <UiText v-bind="args" />
     `,
 });
+
+// eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
+export const Default = Template.bind({}) as {
+    args: InstanceType<typeof UiText>['$props'];
+};
 
 // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
 export const ColorHover = Template.bind({}) as {
