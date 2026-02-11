@@ -1,5 +1,5 @@
 import './UiText.css';
-import UiText from '../../components/UiText.vue';
+import { UiText } from '@/components';
 // @ts-expect-error vue3-vite type
 import type { Meta, StoryFn } from '@storybook/vue3-vite';
 

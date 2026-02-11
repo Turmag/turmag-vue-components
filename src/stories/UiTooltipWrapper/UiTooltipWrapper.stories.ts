@@ -1,7 +1,9 @@
 import './UiTooltipWrapper.css';
-import UiFlex from '../../components/UiFlex.vue';
-import UiTooltipContent from '../../components/UiTooltipContent.vue';
-import UiTooltipWrapper from '../../components/UiTooltipWrapper.vue';
+import {
+    UiFlex,
+    UiTooltipContent,
+    UiTooltipWrapper,
+} from '@/components';
 // @ts-expect-error vue3-vite type
 import type { Meta, StoryFn } from '@storybook/vue3-vite';
 

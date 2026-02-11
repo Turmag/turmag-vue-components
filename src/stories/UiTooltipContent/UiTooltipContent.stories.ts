@@ -1,6 +1,5 @@
 import './UiTooltipContent.css';
-import UiFlex from '../../components/UiFlex.vue';
-import UiTooltipContent from '../../components/UiTooltipContent.vue';
+import { UiFlex, UiTooltipContent } from '@/components';
 // @ts-expect-error vue3-vite type
 import type { Meta, StoryFn } from '@storybook/vue3-vite';
 
