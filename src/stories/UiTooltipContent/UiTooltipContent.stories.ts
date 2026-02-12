@@ -6,17 +6,35 @@ import type { Meta, StoryFn } from '@storybook/vue3-vite';
 export default {
     args: {
         default: 'Содержимое тултипа',
-        padding: '10px 12px',
+        justifyContent: '',
+        padding: '',
+        paddingBlock: 'p10',
+        paddingInline: 'p12',
         radius: 'r4',
         width: 'auto',
     },
     argTypes: {
-        padding: { control: { type: 'string' } },
+        justifyContent: {
+            control: { type: 'select' },
+            options: ['flex-start', 'flex-end', 'center', 'stretch', 'normal', 'space-between', 'space-around', 'space-evenly', ''],
+        },
+        padding: {
+            control: { type: 'select' },
+            options: ['p2', 'p4', 'p6', 'p8', 'p10', 'p12', 'p14', 'p16', 'p18', 'p20', 'p24', 'p28', 'p32', 'p36', 'p40', 'p42', 'p64', 'p80', 'p120', ''],
+        },
+        paddingBlock: {
+            control: { type: 'select' },
+            options: ['p2', 'p4', 'p6', 'p8', 'p10', 'p12', 'p14', 'p16', 'p18', 'p20', 'p24', 'p28', 'p32', 'p36', 'p40', 'p42', 'p64', 'p80', 'p120', ''],
+        },
+        paddingInline: {
+            control: { type: 'select' },
+            options: ['p2', 'p4', 'p6', 'p8', 'p10', 'p12', 'p14', 'p16', 'p18', 'p20', 'p24', 'p28', 'p32', 'p36', 'p40', 'p42', 'p64', 'p80', 'p120', ''],
+        },
         radius: {
             control: { type: 'select' },
             options: ['r0', 'r2', 'r4', 'r6', 'r8', 'r12', 'r14', 'r16', 'r18', 'r20', 'r22', 'r24', 'r26', 'r28', 'r30', 'r32', ''],
         },
-        width: { control: { type: 'string' } },
+        width: { control: { type: 'text' } },
     },
     component: UiTooltipContent,
     tags: ['autodocs'],
@@ -48,3 +66,12 @@ export const BigRadius = Template.bind({}) as {
     args: InstanceType<typeof UiTooltipContent>['$props'];
 };
 BigRadius.args = { radius: 'r32' };
+
+// eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
+export const BigWidth = Template.bind({}) as {
+    args: InstanceType<typeof UiTooltipContent>['$props'];
+};
+BigWidth.args = {
+    justifyContent: 'center',
+    width: '400px',
+};

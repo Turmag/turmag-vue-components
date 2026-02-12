@@ -11,6 +11,7 @@ export default {
         line: 'lh100',
         size: 'fs16',
         text: 'Много разного текста, чтоб было понятно, что меняется, когда мы ставим тот или иной параметр. И хорошо, если этот текст поместится здесь таким образом, чтоб занимать пространство в 2, а то и в 3 строки. Потому что тогда лучше видно, как влияют параметры текста на сам текст.',
+        textAlign: '',
         weight: 'fw400',
         wrap: '',
     },
@@ -32,6 +33,10 @@ export default {
             options: ['fs12', 'fs14', 'fs16', 'fs18', 'fs20', 'fs24', 'fs36'],
         },
         text: { control: { type: 'text' } },
+        textAlign: {
+            control: { type: 'radio' },
+            options: ['left', 'center', 'right', ''],
+        },
         weight: {
             control: { type: 'radio' },
             options: ['fw400', 'fw500', 'fw600', 'fw700'],
