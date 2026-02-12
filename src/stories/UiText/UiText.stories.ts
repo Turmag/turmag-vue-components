@@ -31,7 +31,7 @@ export default {
         },
         size: {
             control: { type: 'select' },
-            options: ['fs12', 'fs14', 'fs16', 'fs18', 'fs20', 'fs24', 'fs36'],
+            options: ['fs12', 'fs14', 'fs16', 'fs18', 'fs20', 'fs24', 'fs28', 'fs32', 'fs36'],
         },
         tag: { control: { type: 'text' } },
         text: { control: { type: 'text' } },
