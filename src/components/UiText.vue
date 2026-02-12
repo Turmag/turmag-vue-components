@@ -8,6 +8,7 @@
             $style[line],
             $style[wrap],
             $style[`display-${display}`],
+            $style[`text-align-${textAlign}`],
         ]"
     >
         <slot>{{ text }}</slot>
@@ -23,6 +24,7 @@ withDefaults(defineProps<{
     line?: 'lh100' | 'lh110' | 'lh120' | 'lh130' | 'lh140' | 'lh150';
     size?: 'fs12' | 'fs14' | 'fs16' | 'fs18' | 'fs20' | 'fs24' | 'fs36';
     text?: string | number | Ref<string, string>;
+    textAlign?: 'left' | 'center' | 'right' | '';
     weight?: 'fw400' | 'fw500' | 'fw600' | 'fw700';
     wrap?: 'nowrap' | 'balance' | '';
 }>(), {
@@ -31,6 +33,7 @@ withDefaults(defineProps<{
     line: 'lh100',
     size: 'fs16',
     text: '',
+    textAlign: '',
     weight: 'fw400',
     wrap: '',
 });
@@ -82,6 +85,14 @@ withDefaults(defineProps<{
     @each $display in $displays {
         .display-#{$display} {
             display: #{$display};
+        }
+    }
+
+    $text-aligns: left, center, right;
+
+    @each $text-align in $text-aligns {
+        .text-align-#{$text-align} {
+            text-align: #{$text-align};
         }
     }
 
