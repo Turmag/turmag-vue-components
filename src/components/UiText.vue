@@ -1,5 +1,6 @@
 <template>
-    <span
+    <component
+        :is="tag"
         :class="[
             $style.text,
             $style[color],
@@ -12,7 +13,7 @@
         ]"
     >
         <slot>{{ text }}</slot>
-    </span>
+    </component>
 </template>
 
 <script lang="ts" setup>
@@ -23,6 +24,7 @@ withDefaults(defineProps<{
     display?: 'block' | 'inline' | 'flex' | '';
     line?: 'lh100' | 'lh110' | 'lh120' | 'lh130' | 'lh140' | 'lh150';
     size?: 'fs12' | 'fs14' | 'fs16' | 'fs18' | 'fs20' | 'fs24' | 'fs36';
+    tag?: keyof HTMLElementTagNameMap;
     text?: string | number | Ref<string, string>;
     textAlign?: 'left' | 'center' | 'right' | '';
     weight?: 'fw400' | 'fw500' | 'fw600' | 'fw700';
@@ -32,6 +34,7 @@ withDefaults(defineProps<{
     display: '',
     line: 'lh100',
     size: 'fs16',
+    tag: 'span',
     text: '',
     textAlign: '',
     weight: 'fw400',

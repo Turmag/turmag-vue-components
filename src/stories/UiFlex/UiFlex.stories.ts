@@ -102,7 +102,7 @@ export default {
             control: { type: 'select' },
             options: ['g2', 'g4', 'g6', 'g8', 'g10', 'g12', 'g16', 'g20', 'g24', 'g28', 'g32', 'g36', 'g40', 'g48', 'g56', 'g60', 'g64', 'g80', 'g120', ''],
         },
-        tag: { control: { type: 'string' } },
+        tag: { control: { type: 'text' } },
         width: {
             control: { type: 'radio' },
             options: ['wfull', ''],
