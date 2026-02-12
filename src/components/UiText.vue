@@ -23,7 +23,7 @@ withDefaults(defineProps<{
     color?: 'default' | 'hover' | 'active' | 'secondary';
     display?: 'block' | 'inline' | 'flex' | '';
     line?: 'lh100' | 'lh110' | 'lh120' | 'lh130' | 'lh140' | 'lh150';
-    size?: 'fs12' | 'fs14' | 'fs16' | 'fs18' | 'fs20' | 'fs24' | 'fs36';
+    size?: 'fs12' | 'fs14' | 'fs16' | 'fs18' | 'fs20' | 'fs24' | 'fs28' | 'fs32' | 'fs36';
     tag?: keyof HTMLElementTagNameMap;
     text?: string | number | Ref<string, string>;
     textAlign?: 'left' | 'center' | 'right' | '';
@@ -59,7 +59,7 @@ withDefaults(defineProps<{
         }
     }
 
-    $sizes: 12, 14, 16, 18, 20, 24, 36;
+    $sizes: 12, 14, 16, 18, 20, 24, 28, 32, 36;
 
     @each $size in $sizes {
         .fs#{$size} {
