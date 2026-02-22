@@ -155,7 +155,7 @@ watch(
 );
 
 watch(
-    () => [props.arrow, props.placement, props.appendTo],
+    () => [props.arrow, props.placement, props.appendTo, props.interactive],
     () => {
         // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
         instance.value.destroy();
