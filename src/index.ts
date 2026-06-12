@@ -5,6 +5,7 @@ import {
     UiTooltipWrapper,
 } from './components';
 import type { App, Plugin } from 'vue';
+import type { TUiTextSize } from './types/UiTextTypes';
 
 // Plugin installation
 export const install = (app: App): void => {
@@ -22,7 +23,11 @@ export default VuComponentsPlugin;
 
 // Named exports (for direct import)
 export {
-    UiFlex, UiText, UiTooltipContent, UiTooltipWrapper,
+    UiFlex,
+    UiText,
+    UiTooltipContent,
+    UiTooltipWrapper,
+    TUiTextSize,
 };
 
 // Type augmentation for global components
