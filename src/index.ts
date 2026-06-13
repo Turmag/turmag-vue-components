@@ -26,6 +26,16 @@ const VuComponentsPlugin: Plugin = { install };
 // Default export (for use with app.use())
 export default VuComponentsPlugin;
 
+// Type augmentation for global components
+declare module '@vue/runtime-core' {
+    export interface IGlobalComponents {
+        UiFlex: typeof UiFlex;
+        UiText: typeof UiText;
+        UiTooltipContent: typeof UiTooltipContent;
+        UiTooltipWrapper: typeof UiTooltipWrapper;
+    }
+}
+
 // Named exports (for direct import)
 export {
     UiFlex,
