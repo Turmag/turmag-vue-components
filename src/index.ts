@@ -5,6 +5,11 @@ import {
     UiTooltipWrapper,
 } from './components';
 import type { App, Plugin } from 'vue';
+import type {
+    TUiFlexGap,
+    TUiFlexPadding,
+    TUiFlexRadius,
+} from './types/UiFlexTypes';
 import type { TUiTextSize } from './types/UiTextTypes';
 
 // Plugin installation
@@ -28,14 +33,7 @@ export {
     UiTooltipContent,
     UiTooltipWrapper,
     TUiTextSize,
+    TUiFlexGap,
+    TUiFlexPadding,
+    TUiFlexRadius,
 };
-
-// Type augmentation for global components
-declare module '@vue/runtime-core' {
-    export interface IGlobalComponents {
-        UiFlex: typeof UiFlex;
-        UiText: typeof UiText;
-        UiTooltipContent: typeof UiTooltipContent;
-        UiTooltipWrapper: typeof UiTooltipWrapper;
-    }
-}

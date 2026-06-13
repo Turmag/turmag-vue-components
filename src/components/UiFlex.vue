@@ -33,9 +33,11 @@
 </template>
 
 <script setup lang="ts">
-type TGap = '' | 'g2' | 'g4' | 'g6' | 'g8' | 'g10' | 'g12' | 'g16' | 'g20' | 'g24' | 'g28' | 'g32' | 'g36' | 'g40' | 'g48' | 'g56' | 'g60' | 'g64' | 'g80' | 'g120';
-type TPadding = '' | 'p2' | 'p4' | 'p6' | 'p8' | 'p10' | 'p12' | 'p14' | 'p16' | 'p18' | 'p20' | 'p24' | 'p28' | 'p32' | 'p36' | 'p40' | 'p42' | 'p64' | 'p80' | 'p120';
-type TRadius = '' | 'r0' | 'r2' | 'r4' | 'r6' | 'r8' | 'r12' | 'r14' | 'r16' | 'r18' | 'r20' | 'r22' | 'r24' | 'r26' | 'r28' | 'r30' | 'r32';
+import type {
+    TUiFlexGap,
+    TUiFlexPadding,
+    TUiFlexRadius,
+} from '@/types/UiFlexTypes';
 
 withDefaults(defineProps<{
     alignContent?: '' | 'flex-start' | 'flex-end' | 'center' | 'baseline' | 'stretch' | 'normal' | 'space-between' | 'space-around' | 'space-evenly';
@@ -43,20 +45,20 @@ withDefaults(defineProps<{
     alignSelf?: '' | 'flex-start' | 'flex-end' | 'center' | 'baseline' | 'stretch' | 'auto';
     bg?: '' | 'default' | 'secondary' | 'accent' | 'surface' | 'muted' | 'quiet';
     borderColor?: '' | 'default' | 'secondary' | 'accent' | 'muted';
-    colGap?: TGap;
+    colGap?: TUiFlexGap;
     direction?: '' | 'col' | 'reverse' | 'col-reverse';
-    gap?: TGap;
+    gap?: TUiFlexGap;
     grow?: boolean;
     height?: '' | 'hfull';
     justifyContent?: '' | 'flex-start' | 'flex-end' | 'center' | 'stretch' | 'normal' | 'space-between' | 'space-around' | 'space-evenly';
     justifyItems?: '' | 'flex-start' | 'flex-end' | 'center' | 'stretch';
     justifySelf?: '' | 'flex-start' | 'flex-end' | 'center' | 'baseline' | 'stretch' | 'auto';
-    padding?: TPadding;
-    paddingBlock?: TPadding;
-    paddingInline?: TPadding;
+    padding?: TUiFlexPadding;
+    paddingBlock?: TUiFlexPadding;
+    paddingInline?: TUiFlexPadding;
     position?: '' | 'relative' | 'absolute' | 'sticky' | 'fixed';
-    radius?: TRadius;
-    rowGap?: TGap;
+    radius?: TUiFlexRadius;
+    rowGap?: TUiFlexGap;
     tag?: keyof HTMLElementTagNameMap | 'router-link';
     width?: '' | 'wfull';
     wrap?: '' | 'nowrap' | 'wrap' | 'wrap-reverse';
