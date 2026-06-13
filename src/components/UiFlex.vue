@@ -86,13 +86,6 @@ withDefaults(defineProps<{
     width: '',
     wrap: '',
 });
-
-const indent: Record<string, string> = {};
-const gapSizes = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 28, 32, 36, 40, 42, 48, 56, 60, 64, 80, 120];
-gapSizes.forEach(size => {
-    indent[`p${size}`] = `${size}px`;
-    indent[`g${size}`] = `${size}px`;
-});
 </script>
 
 <style module lang="scss">
