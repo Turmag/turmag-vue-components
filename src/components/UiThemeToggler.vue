@@ -42,15 +42,29 @@ import {
     UiTooltipContent,
     UiTooltipWrapper,
 } from '.';
+import { ref } from 'vue';
 
-const isDarkMode = defineModel<boolean>();
-const isSavedDarkMode = defineModel<boolean>('isSavedDarkMode');
+interface IProps {
+    savedMode: 'light' | 'dark' | 'auto';
+}
+
+const props = defineProps<IProps>();
+
+interface IEmits {
+    (event: 'toggle', value: boolean): void;
+}
+
+const emits = defineEmits<IEmits>();
+
+const isSavedDarkMode = defineModel<boolean>();
+const isDarkMode = ref(isSavedDarkMode.value ? props.savedMode === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches);
 
 const onToggle = () => {
     const bodyClass = document.body.classList;
     bodyClass.contains('dark') ? bodyClass.remove('dark') : bodyClass.add('dark');
     isDarkMode.value = bodyClass.contains('dark');
     isSavedDarkMode.value = true;
+    emits('toggle', isDarkMode.value);
 };
 
 const onReset = () => {
