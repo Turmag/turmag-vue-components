@@ -1,6 +1,7 @@
 import {
     UiFlex,
     UiIcon,
+    UiLoader,
     UiText,
     UiThemeToggler,
     UiTooltipContent,
@@ -17,6 +18,8 @@ import type { TUiTextSize } from './types/UiTextTypes';
 // Plugin installation
 export const install = (app: App): void => {
     app.component('UiFlex', UiFlex);
+    app.component('UiIcon', UiIcon);
+    app.component('UiLoader', UiLoader);
     app.component('UiText', UiText);
     app.component('UiTooltipContent', UiTooltipContent);
     app.component('UiTooltipWrapper', UiTooltipWrapper);
@@ -34,6 +37,7 @@ declare module '@vue/runtime-core' {
     export interface IGlobalComponents {
         UiFlex: typeof UiFlex;
         UiIcon: typeof UiIcon;
+        UiLoader: typeof UiLoader;
         UiText: typeof UiText;
         UiThemeToggler: typeof UiThemeToggler;
         UiTooltipContent: typeof UiTooltipContent;
@@ -44,8 +48,9 @@ declare module '@vue/runtime-core' {
 // Named exports (for direct import)
 export {
     UiFlex,
-    UiText,
     UiIcon,
+    UiLoader,
+    UiText,
     UiTooltipContent,
     UiTooltipWrapper,
     UiThemeToggler,
