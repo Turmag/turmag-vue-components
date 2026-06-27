@@ -151,7 +151,7 @@ const handleContentClick = () => {
 watch(
     () => visible.value,
     // eslint-disable-next-line @typescript-eslint/no-unsafe-return, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
-    value => value ? instance.value.show() : instance.value.hide(),
+    isValue => isValue ? instance.value.show() : instance.value.hide(),
 );
 
 watch(
@@ -165,11 +165,10 @@ watch(
 
 watch(
     () => props.disabled,
-
-    value => {
+    isValue => {
         if (!instance.value) return;
         // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
-        value ? instance.value.disable() : instance.value.enable();
+        isValue ? instance.value.disable() : instance.value.enable();
     },
 );
 

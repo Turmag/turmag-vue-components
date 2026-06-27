@@ -14,7 +14,7 @@
 </template>
 
 <script setup lang="ts">
-import { UiFlex, UiText } from './';
+import { UiFlex, UiText } from '.';
 
 interface IProps {
     justifyContent?: '' | 'flex-start' | 'flex-end' | 'center' | 'stretch' | 'normal' | 'space-between' | 'space-around' | 'space-evenly';

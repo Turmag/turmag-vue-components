@@ -117,7 +117,7 @@ export default {
     title: 'UiFlex',
 } as Meta<typeof UiFlex>;
 
-export const Template: StoryFn<typeof UiFlex> = (args: InstanceType<typeof UiFlex>['$props']) => ({
+const Template: StoryFn<typeof UiFlex> = (args: InstanceType<typeof UiFlex>['$props']) => ({
     components: { UiFlex },
     setup() {
         // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment

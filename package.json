@@ -2,7 +2,7 @@
     "name": "turmag-vue-components",
     "description": "The library of the components",
     "type": "module",
-    "version": "0.0.15",
+    "version": "0.0.16",
     "private": false,
     "author": {
         "name": "Pavel Vinogradov",
@@ -37,6 +37,7 @@
     "bugs": { "url": "https://github.com/Turmag/turmag-vue-components/issues" },
     "scripts": {
         "build": "vite build",
+        "generate-icons-idx": "node .\\node-files\\generateIconsIndex.js",
         "generate-components-idx": "node .\\/node-files\\/generateComponentsIndex.js",
         "storybook": "storybook dev -p 6006",
         "build-storybook": "storybook build"
