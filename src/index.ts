@@ -1,6 +1,7 @@
 import {
     UiFlex,
     UiText,
+    UiThemeToggler,
     UiTooltipContent,
     UiTooltipWrapper,
 } from './components';
@@ -18,6 +19,7 @@ export const install = (app: App): void => {
     app.component('UiText', UiText);
     app.component('UiTooltipContent', UiTooltipContent);
     app.component('UiTooltipWrapper', UiTooltipWrapper);
+    app.component('UiThemeToggler', UiThemeToggler);
 };
 
 // Vue plugin
@@ -31,6 +33,7 @@ declare module '@vue/runtime-core' {
     export interface IGlobalComponents {
         UiFlex: typeof UiFlex;
         UiText: typeof UiText;
+        UiThemeToggler: typeof UiThemeToggler;
         UiTooltipContent: typeof UiTooltipContent;
         UiTooltipWrapper: typeof UiTooltipWrapper;
     }
@@ -42,6 +45,7 @@ export {
     UiText,
     UiTooltipContent,
     UiTooltipWrapper,
+    UiThemeToggler,
     TUiTextSize,
     TUiFlexGap,
     TUiFlexPadding,
