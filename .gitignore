@@ -23,6 +23,8 @@ dist-ssr
 *.sln
 *.sw?
 
+# Other
 .vscode
 *storybook.log
 storybook-static
+yarn.lock
