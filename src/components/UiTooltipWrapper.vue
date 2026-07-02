@@ -1,6 +1,6 @@
 <template>
     <div :class="[inline && $style.inline]">
-        <div ref="trigger" :class="$style.trigger">
+        <div ref="trigger" :class="[$style.trigger, triggerClass]">
             <slot name="trigger" />
         </div>
 
@@ -58,6 +58,7 @@ interface IProps {
     maxWidth?: number;
     offset?: number[];
     placement?: TTooltipPosition;
+    triggerClass?: string;
     zIndex?: number;
 }
 
@@ -77,6 +78,7 @@ const props = withDefaults(defineProps<IProps>(), {
     // INFO: смещение стрелки от центра тултипа, расстояние от триггера
     offset: () => [0, 10],
     placement: 'top',
+    triggerClass: '',
     zIndex: 9999,
 });
 
