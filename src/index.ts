@@ -9,6 +9,7 @@ import {
 } from './components';
 import type { App, Plugin } from 'vue';
 import type {
+    TUiFlexBg,
     TUiFlexGap,
     TUiFlexPadding,
     TUiFlexRadius,
@@ -58,4 +59,5 @@ export {
     TUiFlexGap,
     TUiFlexPadding,
     TUiFlexRadius,
+    TUiFlexBg,
 };

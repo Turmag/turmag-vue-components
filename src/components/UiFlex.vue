@@ -34,6 +34,7 @@
 
 <script setup lang="ts">
 import type {
+    TUiFlexBg,
     TUiFlexGap,
     TUiFlexPadding,
     TUiFlexRadius,
@@ -43,7 +44,7 @@ withDefaults(defineProps<{
     alignContent?: '' | 'flex-start' | 'flex-end' | 'center' | 'baseline' | 'stretch' | 'normal' | 'space-between' | 'space-around' | 'space-evenly';
     alignItems?: '' | 'flex-start' | 'flex-end' | 'center' | 'baseline' | 'stretch';
     alignSelf?: '' | 'flex-start' | 'flex-end' | 'center' | 'baseline' | 'stretch' | 'auto';
-    bg?: '' | 'default' | 'secondary' | 'accent' | 'surface' | 'muted' | 'quiet';
+    bg?: TUiFlexBg;
     borderColor?: '' | 'default' | 'secondary' | 'accent' | 'muted';
     colGap?: TUiFlexGap;
     direction?: '' | 'col' | 'reverse' | 'col-reverse';
