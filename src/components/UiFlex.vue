@@ -179,7 +179,7 @@ withDefaults(defineProps<{
     }
 
     @for $i from 0 to 120 {
-        $value: $i * 2;
+        $value: $i;
 
         .r#{$value} {
             border-radius: #{$value}px;
