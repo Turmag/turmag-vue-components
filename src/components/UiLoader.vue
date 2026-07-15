@@ -28,7 +28,7 @@ withDefaults(defineProps<IProps>(), { width: 70 });
 
 <style lang="scss" module>
     .loader {
-        height: calc(100% - 115px);
+        height: 100%;
         color: var(--color-text-default);
     }
 

@@ -21,7 +21,7 @@ import type { Ref } from 'vue';
 import type { TUiTextSize } from '@/types/UiTextTypes';
 
 withDefaults(defineProps<{
-    color?: 'default' | 'hover' | 'active' | 'secondary';
+    color?: 'default' | 'hover' | 'active' | 'secondary' | 'accent';
     display?: 'block' | 'inline' | 'flex' | '';
     line?: 'lh100' | 'lh110' | 'lh120' | 'lh130' | 'lh140' | 'lh150';
     size?: TUiTextSize;
@@ -52,7 +52,7 @@ withDefaults(defineProps<{
         display: block;
     }
 
-    $text-colors: default, hover, active, secondary;
+    $text-colors: default, hover, active, secondary, accent;
 
     @each $color in $text-colors {
         .#{$color} {
